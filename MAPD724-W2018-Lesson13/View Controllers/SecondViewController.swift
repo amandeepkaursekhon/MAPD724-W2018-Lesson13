@@ -3,18 +3,28 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    override func viewDidLoad() {
+    @IBOutlet weak var SecondViewLabel: UILabel!
+    override  func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
-        <#code#>
+        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        <#code#>
+    override  func viewDidAppear(_ animated: Bool) {
+        
     }
+    
+    @IBAction func BackButton(_ sender: UIButton) {
+        performSegue(withIdentifier: SequeManager.StartView, sender: sender)
+    }
+    
+    @IBAction func NextButton(_ sender: UIButton) {
+        performSegue(withIdentifier: SequeManager.EndView, sender: sender)
+    }
+    
 }
 
